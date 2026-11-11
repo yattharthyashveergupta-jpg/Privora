@@ -2921,7 +2921,7 @@ function Evidence({
 }
 
 // ---------------------------------------------------------
-// 5B. SIH26117 BENCHMARK & EVALUATION DASHBOARD
+// 5B. PRIVORA BENCHMARK & EVALUATION DASHBOARD
 // ---------------------------------------------------------
 
 function BenchmarkDashboard({
@@ -2969,7 +2969,7 @@ function BenchmarkDashboard({
     return (
       <div style={{ textAlign: 'center', padding: '60px 0', color: 'var(--muted)' }}>
         <RefreshCw size={28} className="animate-spin" style={{ margin: '0 auto 12px', opacity: 0.7 }} />
-        <div>Loading SIH26117 Empirical Benchmark Suite…</div>
+        <div>Loading Privora Empirical Benchmark Suite…</div>
       </div>
     )
   }
@@ -2983,13 +2983,13 @@ function BenchmarkDashboard({
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 14 }}>
         <div>
           <div className="hero-status-badge" style={{ marginBottom: 6, display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-            <BarChart3 size={11} /> SIH26117 EMPIRICAL BENCHMARK DASHBOARD
+            <BarChart3 size={11} /> PRIVORA BENCHMARK & EVALUATION
           </div>
           <h1 style={{ fontSize: 24, fontWeight: 700, margin: 0, color: 'var(--text)' }}>
             Empirical Evaluation & Metrics
           </h1>
           <p style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--muted)' }}>
-            Mangalore Refinery and Petrochemicals Limited (MRPL) Petrochemical Evaluation Corpus
+            Enterprise Evaluation Corpus & Deterministic Multi-Document Benchmark Suite
           </p>
         </div>
         <button
@@ -3069,7 +3069,7 @@ function BenchmarkDashboard({
       {/* Benchmark Verification & Grounding Note */}
       <div style={{ background: 'rgba(255, 255, 255, 0.02)', padding: '12px 16px', borderRadius: 8, border: '1px solid rgba(255, 180, 190, 0.09)', fontSize: '11px', color: 'var(--muted)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10 }}>
         <div>
-          <strong style={{ color: 'var(--text)' }}>Empirical Evaluation Corpus:</strong> Measured on {data.corpus?.total_documents || 4} confidential MRPL documents across 6 rigorous categories.
+          <strong style={{ color: 'var(--text)' }}>Empirical Evaluation Corpus:</strong> Measured on {data.corpus?.total_documents || 4} confidential industrial enterprise documents across 6 rigorous categories.
           Grounding verified through dual-source citation coordinates. 0.0% hallucination achieved in the benchmark suite; general queries rely on indexed evidence.
         </div>
         <div style={{ fontSize: '10px', color: 'var(--sub)' }}>
@@ -3132,7 +3132,7 @@ function BenchmarkDashboard({
                 <th style={{ padding: '8px 10px' }}>Evaluation Dimension</th>
                 <th style={{ padding: '8px 10px' }}>Pure BM25 Baseline</th>
                 <th style={{ padding: '8px 10px' }}>Privora Local Neural RAG</th>
-                <th style={{ padding: '8px 10px' }}>MRPL Operational Impact</th>
+                <th style={{ padding: '8px 10px' }}>Enterprise Operational Impact</th>
               </tr>
             </thead>
             <tbody>
@@ -3627,7 +3627,7 @@ function Settings({
           </label>
 
           <div style={{ marginTop: 'auto', paddingTop: 18, borderTop: '1px solid rgba(255, 180, 190, 0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <span style={{ fontSize: '10px', color: 'var(--muted)' }}>Privora v1.1.0 Enterprise</span>
+            <span style={{ fontSize: '10px', color: 'var(--muted)' }}>Privora Enterprise</span>
             <button className="secondary-button" onClick={handleReset}>
               <RotateCcw size={12} />
               Reset to defaults

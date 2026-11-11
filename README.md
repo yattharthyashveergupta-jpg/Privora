@@ -3,9 +3,8 @@
 # PRIVORA
 ### Private Document Intelligence Workbench for Confidential Data
 
-**Smart India Hackathon 2026 | Problem Statement ID: SIH26117**  
-**Organisation: Mangalore Refinery and Petrochemicals Limited (MRPL)**  
-**Release: v1.1.0 (Air-Gapped Desktop & On-Premise Edition)**
+**Private On-Premise Document Intelligence & Tabular Analytics**  
+**Air-Gapped Desktop & Enterprise Edition**
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.14-green.svg)](https://www.python.org/)
@@ -24,7 +23,7 @@
 
 In high-consequence industries such as petrochemical refining, national defense, and confidential manufacturing, operational documentation contains trade secrets, piping and instrumentation diagrams (P&IDs), process parameters, and critical safety thresholds. Public cloud AI platforms (ChatGPT, Claude, Gemini) risk data leakage and violate data residency mandates.
 
-**SIH26117 Objective**: Develop an on-premise, air-gapped document intelligence workbench capable of indexing confidential industrial documents, answering complex cross-document technical queries with verified citations, performing deterministic spreadsheet analytics, and auditing conflicting records—running **100% locally on workstation hardware**.
+**Privora Mission**: Develop an on-premise, air-gapped document intelligence workbench capable of indexing confidential industrial documents, answering complex cross-document technical queries with verified citations, performing deterministic spreadsheet analytics, and auditing conflicting records—running **100% locally on workstation hardware**.
 
 ---
 
@@ -293,5 +292,5 @@ Privora is licensed under the **Apache License, Version 2.0**. See the [LICENSE]
 ---
 
 <div align="center">
-<strong>Built for Smart India Hackathon 2026 | Mangalore Refinery and Petrochemicals Limited (MRPL)</strong>
+<strong>Privora — Private Document Intelligence Workbench</strong>
 </div>

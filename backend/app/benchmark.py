@@ -10,7 +10,7 @@ from typing import Any
 DEFAULT_BENCHMARK_FILE = Path(__file__).resolve().parent.parent / "data" / "benchmark_cache.json"
 
 EMPIRICAL_BENCHMARK_DATA: dict[str, Any] = {
-    "suite_name": "Privora SIH26117 Enterprise Benchmark (MRPL Petrochemical Dataset)",
+    "suite_name": "Privora Enterprise Benchmark",
     "evaluation_timestamp": "2026-11-10T20:00:00Z",
     "hardware_profile": {
         "os": "Windows 11 Build 26300 (AMD64)",

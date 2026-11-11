@@ -1,5 +1,5 @@
 # Privora — User & Operations Manual
-### Private Document Intelligence Workbench (v1.1.0)
+### Private Document Intelligence Workbench
 
 Privora is a zero-trust, commercial-grade document intelligence workbench engineered for completely private, on-premise document search, question-answering, tabular analysis, and knowledge synthesis with local AI models running on your own hardware.
 

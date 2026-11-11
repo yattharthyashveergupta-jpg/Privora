@@ -1,7 +1,7 @@
 # Privora — Release Notes
-### Version 1.1.0 (Production Master Release)
+### Consolidated Production Release
 
-Privora 1.1.0 represents the final consolidated commercial release of the Private Document Intelligence Workbench. This release delivers two enterprise deployment editions, expanded document intelligence, deterministic spreadsheet analytics, cross-document contradiction auditing, and full air-gap compliance.
+Privora represents the consolidated commercial production release of the Private Document Intelligence Workbench. This release delivers two enterprise deployment editions, expanded document intelligence, deterministic spreadsheet analytics, cross-document contradiction auditing, and full air-gap compliance.
 
 ---
 

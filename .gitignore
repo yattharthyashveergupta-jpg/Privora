@@ -68,3 +68,4 @@ tsconfig.tsbuildinfo
 release/source/*.zip
 release/desktop/*.exe
 release/on-premise/*.zip
+_rebrand_backup/
