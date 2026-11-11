@@ -1,0 +1,8 @@
+pmOnFail: ignore
+
+minimumReleaseAgeExclude:
+  - '@next/*'
+  - next
+
+overrides:
+  proxy-addr: 2.0.8

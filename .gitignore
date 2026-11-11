@@ -1,0 +1,70 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing and Coverage
+coverage/
+.nyc_output/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*$py.class
+*.orig
+
+# Next.js Build Outputs
+.next/
+out/
+build/
+dist/
+dist-installer/
+
+# Python Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Privora Local Data & Databases (NEVER COMMIT SENSITIVE DATA OR DBs)
+backend/data/*
+!backend/data/.gitkeep
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.db
+
+# Temporary and Scratch Directories
+scratch/
+scratch_*
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Environment Variables & Secrets
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Operating System & IDE Artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build and Compiler Metadata
+tsconfig.tsbuildinfo
+*.spec.bak
+
+# Release Packages (Distribute via GitHub Releases)
+release/source/*.zip
+release/desktop/*.exe
+release/on-premise/*.zip

@@ -1,0 +1,92 @@
+version: "3.8"
+
+services:
+  # ============================================================================
+  # Privora Enterprise Application Server (Unified Frontend + FastAPI Backend)
+  # ============================================================================
+  privora-app:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: privora/workbench:latest
+    container_name: privora_app
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    env_file:
+      - .env.server
+    environment:
+      - DEPLOYMENT_MODE=server
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - DATA_DIR=/app/data
+      - DATABASE_PATH=/app/data/workbench.sqlite3
+      - STATIC_DIR=/app/static
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - privora_data:/app/data
+    depends_on:
+      ollama:
+        condition: service_healthy
+    networks:
+      - privora_internal
+    expose:
+      - "8000"
+
+  # ============================================================================
+  # Local Air-Gapped LLM Inference Engine (Ollama)
+  # ============================================================================
+  ollama:
+    image: ollama/ollama:latest
+    container_name: privora_ollama
+    restart: unless-stopped
+    volumes:
+      - ollama_models:/root/.ollama
+    environment:
+      - OLLAMA_HOST=0.0.0.0:11434
+      - OLLAMA_KEEP_ALIVE=24h
+    networks:
+      - privora_internal
+    expose:
+      - "11434"
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    # Uncomment deploy block below for NVIDIA GPU acceleration (CUDA)
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+  # ============================================================================
+  # Hardened Reverse Proxy & TLS Termination (Nginx)
+  # ============================================================================
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: privora_proxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certs:/etc/nginx/certs:ro
+    depends_on:
+      - privora-app
+    networks:
+      - privora_internal
+
+networks:
+  privora_internal:
+    driver: bridge
+
+volumes:
+  privora_data:
+    name: privora_enterprise_data
+  ollama_models:
+    name: privora_ollama_models
